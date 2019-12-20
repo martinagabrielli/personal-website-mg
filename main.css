@@ -1,0 +1,125 @@
+html, body {
+  height: 100%;
+}
+
+h1 {
+  margin: 1em 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: #9B59B6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2C3E50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  font: 14pt Helvetica-Light, Arial, sans-serif;
+  text-align: center;
+  color: #2C3E50;
+  background-color: #FBFCFC;
+  border-top: #9B59B6 2px solid;
+  margin: auto;
+  line-height: 1.5em;
+}
+
+* body.home #profile {
+  padding: 7.5em 0 7.5em 0;
+}
+
+* body.home .me {
+  padding-bottom: 0.7em;
+  font-size: 30pt;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+* body.home .me > b {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+}
+
+* body.post {
+  text-align: left;
+}
+
+* body > .container {
+  margin: 3em 1.5em;
+  font-size: 12pt;
+}
+
+* body > .container .section {
+  text-align: left;
+}
+
+* body > .container h1 {
+  font-weight: 300;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+* body > .container span {
+  color: #92979a;
+}
+
+* body > .container > #profile {
+  display: inline-block;
+}
+
+* body > .container > #profile > .hi {
+  color: #2C3E50;
+}
+
+* body > .container > #profile > .hi > .social_icons {
+  padding-bottom: 2em;
+}
+
+* body > .container > #profile > .hi > .social_icons > a > img {
+  padding: 0 .6em;
+  width: 2.5em;
+}
+
+* body > .container > #profile > .hi > .social_icons > a > img:hover {
+  opacity: .7;
+}
+
+* body > .container > #blog > .posts > ul {
+  list-style-type: none;
+}
+
+* body > .container #post > ul {
+  list-style-position: inside;
+}
+
+/*****************************************************************************/
+/*
+/* Mobile
+/*
+/*****************************************************************************/
+@media (max-width: 499px) {
+  body {
+    font-size: 10pt;
+    line-height: 2em;
+  }
+  body.home > .container {
+    margin: 1em 0.8em;
+  }
+  body.home > .container .me {
+    font-size: 25pt;
+  }
+  body h1 {
+    font-size: 1.7em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

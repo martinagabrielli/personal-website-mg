@@ -1,0 +1,126 @@
+html, body { height: 100%; }
+
+h1 { margin: 1em 0; }
+p  { margin: 1em 0; }
+
+a         { color: #9B59B6; text-decoration: none; }
+a:hover   { color: #2C3E50; }
+
+* {
+    margin: 0;
+    padding: 0;
+    body {
+        font: 14pt Helvetica-Light, Arial, sans-serif;
+        text-align: center;
+        color: #2C3E50;
+        background-color: #FBFCFC;
+        border-top: #9B59B6 2px solid;
+        margin: auto;
+        line-height: 1.5em;
+
+        &.home {
+            #profile {
+                padding: 7.5em 0 7.5em 0;
+            }
+
+            .me {
+                padding-bottom: 0.7em;
+                font-size: 30pt;
+                font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-weight: lighter;
+                line-height: 1;
+                > b {
+                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                    font-weight: normal;
+                }
+            }
+        }
+        &.post {
+            text-align: left;
+        }
+
+        > .container {
+            margin: 3em 1.5em;
+            font-size: 12pt;
+
+            .section {
+                text-align: left;
+            }
+            h1 {
+                font-weight: 300;
+                font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            }
+            span {
+                color: #92979a;
+            }
+            > #profile {
+                display: inline-block;
+                > .hi {
+                    color: #2C3E50;
+                    > .social_icons {
+                        padding-bottom: 2em;
+                        > a {
+                            > img {
+                                padding: 0 .6em;
+                                width: 2.5em;
+                                &:hover {
+                                    opacity: .7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > #projects {
+                > .projects-content {
+                    > p {
+                    }
+                }
+            }
+            > #blog {
+                > .posts {
+                    > ul {
+                        list-style-type: none;
+                        > li {
+                            > a {
+
+                            }
+                        }
+                    }
+                }
+            }
+            #post {
+                > ul {
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Mobile
+/*
+/*****************************************************************************/
+
+@media (max-width: 499px) {
+    body {
+        font-size: 10pt;
+        line-height: 2em;
+        &.home {
+            > .container {
+                margin: 1em 0.8em;
+                .me {
+                    font-size: 25pt;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+}
+
+
