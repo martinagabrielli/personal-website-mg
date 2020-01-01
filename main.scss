@@ -37,6 +37,49 @@ a:hover   { color: #2C3E50; }
         }
         &.post {
             text-align: left;
+            .container {
+                #profile {
+
+                }
+                .hero-image {
+                    display: block;
+                    width: 60vw;
+                    margin: auto;
+                }
+                #post {
+                    .jpg-image-set {
+                        width: 900px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        text-align: center;
+                        margin: auto;
+                        .cat-jpg {
+                            width: 400px;
+                        }   
+                    }
+                    .png-image-set {
+                        text-align: center;
+                        .cat-png {
+                            width: 450px;
+                        }
+                    }
+                    .gif-image-set {
+                        margin: 30px auto;
+                        text-align: center;
+                        .cat-gif {
+                            width: 400px;
+                        }
+                    }  
+                    .svg-image-set {
+                        text-align: center;
+                        margin: 30px auto;
+                        .cat-svg {
+                            width: 300px;
+                        }
+                    }        
+                }
+            }
         }
 
         > .container {
@@ -73,7 +116,8 @@ a:hover   { color: #2C3E50; }
             }
             > #projects {
                 > .projects-content {
-                    > p {
+                    > ul {
+                        list-style-type: none;
                     }
                 }
             }

@@ -55,6 +55,58 @@ a:hover {
   text-align: left;
 }
 
+* body.post .container .hero-image {
+  display: block;
+  width: 60vw;
+  margin: auto;
+}
+
+* body.post .container #post .jpg-image-set {
+  width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin: auto;
+}
+
+* body.post .container #post .jpg-image-set .cat-jpg {
+  width: 400px;
+}
+
+* body.post .container #post .png-image-set {
+  text-align: center;
+}
+
+* body.post .container #post .png-image-set .cat-png {
+  width: 450px;
+}
+
+* body.post .container #post .gif-image-set {
+  margin: 30px auto;
+  text-align: center;
+}
+
+* body.post .container #post .gif-image-set .cat-gif {
+  width: 400px;
+}
+
+* body.post .container #post .svg-image-set {
+  text-align: center;
+  margin: 30px auto;
+}
+
+* body.post .container #post .svg-image-set .cat-svg {
+  width: 300px;
+}
+
 * body > .container {
   margin: 3em 1.5em;
   font-size: 12pt;
@@ -92,6 +144,10 @@ a:hover {
 
 * body > .container > #profile > .hi > .social_icons > a > img:hover {
   opacity: .7;
+}
+
+* body > .container > #projects > .projects-content > ul {
+  list-style-type: none;
 }
 
 * body > .container > #blog > .posts > ul {
