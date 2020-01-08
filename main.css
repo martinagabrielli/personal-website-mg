@@ -107,6 +107,10 @@ a:hover {
   width: 300px;
 }
 
+* body.post.advanced-custom-fields .container img {
+  margin-top: 30px;
+}
+
 * body > .container {
   margin: 3em 1.5em;
   font-size: 12pt;

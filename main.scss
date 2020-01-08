@@ -80,6 +80,13 @@ a:hover   { color: #2C3E50; }
                     }        
                 }
             }
+            &.advanced-custom-fields {
+                .container {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+            }
         }
 
         > .container {
