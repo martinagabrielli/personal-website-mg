@@ -6,6 +6,8 @@ p  { margin: 1em 0; }
 a         { color: #9B59B6; text-decoration: none; }
 a:hover   { color: #2C3E50; }
 
+mark { background: lightgrey;}
+
 * {
     margin: 0;
     padding: 0;
@@ -87,6 +89,37 @@ a:hover   { color: #2C3E50; }
                     }
                 }
             }
+            &.sprite-sheets {
+                .container {
+                    #post {
+                        .item {
+                            background: url(../images/cat-sprite.gif);
+                            background-size: 300px;
+                            background-position: 0 0;
+                            width: 150px;
+                            height: 150px;
+                            &:hover {
+                                background-position: -150px 0;
+                            }
+                        }
+                        .cat-icons {
+                            display: flex;
+                            .single {
+                                padding-right: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .cat {
+                                    width: 150px;
+                                }
+                            }
+                        }
+                        .sprite-sheet {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
         }
 
         > .container {
@@ -155,7 +188,7 @@ a:hover   { color: #2C3E50; }
 /*
 /*****************************************************************************/
 
-@media (max-width: 499px) {
+@media (max-width: 480px) {
     body {
         font-size: 10pt;
         line-height: 2em;
@@ -167,7 +200,99 @@ a:hover   { color: #2C3E50; }
                 }
             }
         }
+        &.image-formats {
+            .container {
+                #post {
+                    .jpg-image-set {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-jpg {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .png-image-set {
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-png {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .gif-image-set {
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-gif {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+}
 
+/*****************************************************************************/
+/*
+/* Tablet
+/*
+/*****************************************************************************/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        font-size: 10pt;
+        line-height: 2em;
+        &.home {
+            > .container {
+                margin: 1em 0.8em;
+                .me {
+                    font-size: 25pt;
+                }
+            }
+        }
+        &.image-formats {
+            .container {
+                #post {
+                    .jpg-image-set {
+                        width: 100%;
+                        display: flex;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-jpg {
+                                width: 90%;
+                            }
+                        }
+                    }
+                    .png-image-set {
+                        width: 400px;
+                        margin: auto;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-png {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .gif-image-set {
+                        width: 400px;
+                        margin: auto;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-gif {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         h1 {
             font-size: 1.7em;
         }

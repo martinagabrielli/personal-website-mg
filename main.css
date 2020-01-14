@@ -19,6 +19,10 @@ a:hover {
   color: #2C3E50;
 }
 
+mark {
+  background: lightgrey;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,6 +115,46 @@ a:hover {
   margin-top: 30px;
 }
 
+* body.post.sprite-sheets .container #post .item {
+  background: url(../images/cat-sprite.gif);
+  background-size: 300px;
+  background-position: 0 0;
+  width: 150px;
+  height: 150px;
+}
+
+* body.post.sprite-sheets .container #post .item:hover {
+  background-position: -150px 0;
+}
+
+* body.post.sprite-sheets .container #post .cat-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* body.post.sprite-sheets .container #post .cat-icons .single {
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body.post.sprite-sheets .container #post .cat-icons .single .cat {
+  width: 150px;
+}
+
+* body.post.sprite-sheets .container #post .sprite-sheet {
+  width: 300px;
+}
+
 * body > .container {
   margin: 3em 1.5em;
   font-size: 12pt;
@@ -167,7 +211,7 @@ a:hover {
 /* Mobile
 /*
 /*****************************************************************************/
-@media (max-width: 499px) {
+@media (max-width: 480px) {
   body {
     font-size: 10pt;
     line-height: 2em;
@@ -177,6 +221,87 @@ a:hover {
   }
   body.home > .container .me {
     font-size: 25pt;
+  }
+  body.image-formats .container #post .jpg-image-set {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.image-formats .container #post .jpg-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .jpg-image-set figure .cat-jpg {
+    width: 100%;
+  }
+  body.image-formats .container #post .png-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .png-image-set figure .cat-png {
+    width: 100%;
+  }
+  body.image-formats .container #post .gif-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .gif-image-set figure .cat-gif {
+    width: 100%;
+  }
+  body h1 {
+    font-size: 1.7em;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Tablet
+/*
+/*****************************************************************************/
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    font-size: 10pt;
+    line-height: 2em;
+  }
+  body.home > .container {
+    margin: 1em 0.8em;
+  }
+  body.home > .container .me {
+    font-size: 25pt;
+  }
+  body.image-formats .container #post .jpg-image-set {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body.image-formats .container #post .jpg-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .jpg-image-set figure .cat-jpg {
+    width: 90%;
+  }
+  body.image-formats .container #post .png-image-set {
+    width: 400px;
+    margin: auto;
+  }
+  body.image-formats .container #post .png-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .png-image-set figure .cat-png {
+    width: 100%;
+  }
+  body.image-formats .container #post .gif-image-set {
+    width: 400px;
+    margin: auto;
+  }
+  body.image-formats .container #post .gif-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .gif-image-set figure .cat-gif {
+    width: 100%;
   }
   body h1 {
     font-size: 1.7em;

@@ -28,7 +28,8 @@
 
         <h2>What is a CSS Sprite?</h2>
 
-        <p>CSS Sprite is a performance optimisation technique which consist of combining multiple images into a single image file called <i>Sprite Sheet</i>. To display a single image from the combined one, you could then use the CSS background-position property, defining the exact position of the image to be displayed. The advantage of using this method is the reduction of network congestion by limiting the number of downloads needed to render a web page. In fact, a web page with many images can take long time to load and generates multiple server requests. With Sprites, the number of HTTP requests will be significantly reduced resulting in overall site performance improvement.</p>
+        <p>CSS Sprite is a performance optimisation technique which consist of combining multiple images into a single image file called <i>Sprite Sheet</i>. To display a single image from the combined one, you could then use the CSS background-position property, defining the exact position of the image to be displayed.</p>
+        <p>The advantage of using this method is the reduction of network congestion by limiting the number of downloads needed to render a web page. In fact, a web page with many images can take long time to load and generates multiple server requests. With Sprites, the number of HTTP requests will be significantly reduced resulting in overall site performance improvement.</p>
         <p>Let’s take an example. It’s common for websites to have multiple icons that change in style when the user hovers over them. When you place the mouse pointer over the browser icons in non-sprite version for the first time the hover image will appear after some time, causing an unwanted “flickering” effect. This happens because the hover image is loaded from the server on mouse hover, since the normal and hover images are two different images. 
         Whereas in Sprite version, since all individual images are combined in a single one, the hover image is displayed immediately on mouse hover which results in smooth hover effect.</p>
 
@@ -39,15 +40,38 @@
 
         <h2>How to implement a sprite sheet</h2>
 
-        <p>Suppose an image is given to an item with class item: </p>
+        <p>Suppose you have a cat icon and you want to add an hover state that turns the image dark, these are the two images you have:</p>
 
-        <img src="../images/original.png" alt="">
+        <div class="cat-icons">
+          <div class="single">
+            <img class="cat" src="../images/cat-light.png">
+            <caption>Original state</caption>
+          </div>
+          <div class="single">
+            <img class="cat" src="../images/cat-dark.png">
+            <caption>Hover state</caption>
+          </div>
+        </div>
 
-        <p>How this works is that the image on top is the image I want to display before hover.</p>
+        <p>Let's combine the two images side by side with photoshop:</p>
 
-        <img src="../images/hover.png" alt="">
+        <img class="sprite-sheet" src="../images/sprite-sheet.jpg">
+
+        <p>With HTML we have created a div element with class <mark>item</mark> and with CSS we set the background URL to reference the image file we have created:</p>
+
+        <img src="../images/original.jpg">
+
+        <p>How this works is that the image on top is the image I want to display before hover. We use the background-position property with the 2-value syntax where the first value defines X and the second defines Y and we set both values to 0.</p>
+
+        <img src="../images/hover.jpg">
         
-        <p>That’s why the background is set to top. Then on hover I want the image below to be displayed, so that’s why the background-position is set to bottom. </p>
+        <p>Then on hover I want the image below to be displayed, so that’s why the background-position Y is set to -20px. </p>
+
+        <p>Here's the final result. The hover effect works as expected and the browser only needs to load one image instead of two.</p>
+
+        <div class="item"></div>
+
+        <p>Of course this is a basic example, but just think about how much loading time you could save when dealing with large web pages. It's not by chance that companies like Amazon, Ebay and YouTube use this technique, it can really make the difference in user experience and site performance.</p>
 
     </div>
     <div id="global_footer"></div>
