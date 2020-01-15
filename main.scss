@@ -41,12 +41,11 @@ mark { background: lightgrey;}
             text-align: left;
             .container {
                 #profile {
-
                 }
                 .hero-image {
                     display: block;
                     width: 60vw;
-                    margin: auto;
+                    margin: 30px auto 30px auto;
                 }
                 #post {
                     .jpg-image-set {
@@ -80,44 +79,6 @@ mark { background: lightgrey;}
                             width: 300px;
                         }
                     }        
-                }
-            }
-            &.advanced-custom-fields {
-                .container {
-                    img {
-                        margin-top: 30px;
-                    }
-                }
-            }
-            &.sprite-sheets {
-                .container {
-                    #post {
-                        .item {
-                            background: url(../images/cat-sprite.gif);
-                            background-size: 300px;
-                            background-position: 0 0;
-                            width: 150px;
-                            height: 150px;
-                            &:hover {
-                                background-position: -150px 0;
-                            }
-                        }
-                        .cat-icons {
-                            display: flex;
-                            .single {
-                                padding-right: 20px;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                .cat {
-                                    width: 150px;
-                                }
-                            }
-                        }
-                        .sprite-sheet {
-                            width: 300px;
-                        }
-                    }
                 }
             }
         }
@@ -233,6 +194,47 @@ mark { background: lightgrey;}
                 }
             }
         }
+        &.advanced-custom-fields {
+            .container {
+                img {
+                    margin-top: 30px;
+                }
+            }
+        }
+        &.sprite-sheets {
+            .container {
+                #post {
+                    .item {
+                        background: url(../images/cat-sprite.gif) no-repeat;
+                        background-size: 300px;
+                        background-position: 0 0;
+                        width: 150px;
+                        height: 150px;
+                        &:hover {
+                            background-position: -150px 0;
+                        }
+                    }
+                    .cat-icons {
+                        display: flex;
+                        .single {
+                            padding-right: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .cat {
+                                width: 120px;
+                            }
+                        }
+                    }
+                    .sprite-sheet {
+                        width: 250px;
+                    }
+                    .code-img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         h1 {
             font-size: 1.7em;
         }
@@ -289,6 +291,144 @@ mark { background: lightgrey;}
                                 width: 100%;
                             }
                         }
+                    }
+                }
+            }
+        }
+        &.sprite-sheets {
+            .container {
+                #post {
+                    .item {
+                        background: url(../images/cat-sprite.gif);
+                        background-size: 300px;
+                        background-position: 0 0;
+                        width: 150px;
+                        height: 150px;
+                        &:hover {
+                            background-position: -150px 0;
+                        }
+                    }
+                    .cat-icons {
+                        display: flex;
+                        .single {
+                            padding-right: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .cat {
+                                width: 120px;
+                            }
+                        }
+                    }
+                    .sprite-sheet {
+                        width: 250px;
+                    }
+                    .code-img {
+                        width: 500px;
+                    }
+                    .item {
+                        background-size: 250px;
+                        width: 125px;
+                        height: 125px;
+                        &:hover {
+                            background-position: -125px 0;
+                        }
+                       
+                    }
+                }
+            }
+        }
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Desktop
+/*
+/*****************************************************************************/
+
+@media (min-width: 1025px) {
+    body {
+        font-size: 10pt;
+        line-height: 2em;
+        &.home {
+            > .container {
+                margin: 1em 0.8em;
+                .me {
+                    font-size: 25pt;
+                }
+            }
+        }
+        &.image-formats {
+            .container {
+                #post {
+                    .jpg-image-set {
+                        width: 100%;
+                        display: flex;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-jpg {
+                                width: 90%;
+                            }
+                        }
+                    }
+                    .png-image-set {
+                        width: 400px;
+                        margin: auto;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-png {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .gif-image-set {
+                        width: 400px;
+                        margin: auto;
+                        figure {
+                            margin-bottom: 20px;
+                            .cat-gif {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.sprite-sheets {
+            .container {
+                #post {
+                    .cat-icons {
+                        display: flex;
+                        .single {
+                            padding-right: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .cat {
+                                width: 120px;
+                            }
+                        }
+                    }
+                    .sprite-sheet {
+                        width: 250px;
+                    }
+                    .code-img {
+                        width: 500px;
+                    }
+                    .item {
+                        background: url(../images/cat-sprite.gif);
+                        background-position: 0 0;
+                        background-size: 250px;
+                        width: 125px;
+                        height: 125px;
+                        &:hover {
+                            background-position: -125px 0;
+                        }
+                       
                     }
                 }
             }

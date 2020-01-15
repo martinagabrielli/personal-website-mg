@@ -62,7 +62,7 @@ mark {
 * body.post .container .hero-image {
   display: block;
   width: 60vw;
-  margin: auto;
+  margin: 30px auto 30px auto;
 }
 
 * body.post .container #post .jpg-image-set {
@@ -108,50 +108,6 @@ mark {
 }
 
 * body.post .container #post .svg-image-set .cat-svg {
-  width: 300px;
-}
-
-* body.post.advanced-custom-fields .container img {
-  margin-top: 30px;
-}
-
-* body.post.sprite-sheets .container #post .item {
-  background: url(../images/cat-sprite.gif);
-  background-size: 300px;
-  background-position: 0 0;
-  width: 150px;
-  height: 150px;
-}
-
-* body.post.sprite-sheets .container #post .item:hover {
-  background-position: -150px 0;
-}
-
-* body.post.sprite-sheets .container #post .cat-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-* body.post.sprite-sheets .container #post .cat-icons .single {
-  padding-right: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* body.post.sprite-sheets .container #post .cat-icons .single .cat {
-  width: 150px;
-}
-
-* body.post.sprite-sheets .container #post .sprite-sheet {
   width: 300px;
 }
 
@@ -250,6 +206,46 @@ mark {
   body.image-formats .container #post .gif-image-set figure .cat-gif {
     width: 100%;
   }
+  body.advanced-custom-fields .container img {
+    margin-top: 30px;
+  }
+  body.sprite-sheets .container #post .item {
+    background: url(../images/cat-sprite.gif) no-repeat;
+    background-size: 300px;
+    background-position: 0 0;
+    width: 150px;
+    height: 150px;
+  }
+  body.sprite-sheets .container #post .item:hover {
+    background-position: -150px 0;
+  }
+  body.sprite-sheets .container #post .cat-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body.sprite-sheets .container #post .cat-icons .single {
+    padding-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.sprite-sheets .container #post .cat-icons .single .cat {
+    width: 120px;
+  }
+  body.sprite-sheets .container #post .sprite-sheet {
+    width: 250px;
+  }
+  body.sprite-sheets .container #post .code-img {
+    width: 100%;
+  }
   body h1 {
     font-size: 1.7em;
   }
@@ -302,6 +298,141 @@ mark {
   }
   body.image-formats .container #post .gif-image-set figure .cat-gif {
     width: 100%;
+  }
+  body.sprite-sheets .container #post .item {
+    background: url(../images/cat-sprite.gif);
+    background-size: 300px;
+    background-position: 0 0;
+    width: 150px;
+    height: 150px;
+  }
+  body.sprite-sheets .container #post .item:hover {
+    background-position: -150px 0;
+  }
+  body.sprite-sheets .container #post .cat-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body.sprite-sheets .container #post .cat-icons .single {
+    padding-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.sprite-sheets .container #post .cat-icons .single .cat {
+    width: 120px;
+  }
+  body.sprite-sheets .container #post .sprite-sheet {
+    width: 250px;
+  }
+  body.sprite-sheets .container #post .code-img {
+    width: 500px;
+  }
+  body.sprite-sheets .container #post .item {
+    background-size: 250px;
+    width: 125px;
+    height: 125px;
+  }
+  body.sprite-sheets .container #post .item:hover {
+    background-position: -125px 0;
+  }
+  body h1 {
+    font-size: 1.7em;
+  }
+}
+
+/*****************************************************************************/
+/*
+/* Desktop
+/*
+/*****************************************************************************/
+@media (min-width: 1025px) {
+  body {
+    font-size: 10pt;
+    line-height: 2em;
+  }
+  body.home > .container {
+    margin: 1em 0.8em;
+  }
+  body.home > .container .me {
+    font-size: 25pt;
+  }
+  body.image-formats .container #post .jpg-image-set {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body.image-formats .container #post .jpg-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .jpg-image-set figure .cat-jpg {
+    width: 90%;
+  }
+  body.image-formats .container #post .png-image-set {
+    width: 400px;
+    margin: auto;
+  }
+  body.image-formats .container #post .png-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .png-image-set figure .cat-png {
+    width: 100%;
+  }
+  body.image-formats .container #post .gif-image-set {
+    width: 400px;
+    margin: auto;
+  }
+  body.image-formats .container #post .gif-image-set figure {
+    margin-bottom: 20px;
+  }
+  body.image-formats .container #post .gif-image-set figure .cat-gif {
+    width: 100%;
+  }
+  body.sprite-sheets .container #post .cat-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body.sprite-sheets .container #post .cat-icons .single {
+    padding-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.sprite-sheets .container #post .cat-icons .single .cat {
+    width: 120px;
+  }
+  body.sprite-sheets .container #post .sprite-sheet {
+    width: 250px;
+  }
+  body.sprite-sheets .container #post .code-img {
+    width: 500px;
+  }
+  body.sprite-sheets .container #post .item {
+    background: url(../images/cat-sprite.gif);
+    background-position: 0 0;
+    background-size: 250px;
+    width: 125px;
+    height: 125px;
+  }
+  body.sprite-sheets .container #post .item:hover {
+    background-position: -125px 0;
   }
   body h1 {
     font-size: 1.7em;
