@@ -41,6 +41,7 @@ mark { background: lightgrey;}
             text-align: left;
             .container {
                 #profile {
+
                 }
                 .hero-image {
                     display: block;
@@ -48,6 +49,9 @@ mark { background: lightgrey;}
                     margin: 30px auto 30px auto;
                 }
                 #post {
+                    h2 {
+                        font-size: 1.4em;
+                    }
                     .jpg-image-set {
                         width: 900px;
                         display: flex;
@@ -79,6 +83,23 @@ mark { background: lightgrey;}
                             width: 300px;
                         }
                     }        
+                }
+                #post-title {
+                    font-weight: bold;
+                    font-size: 2em;
+                    margin: 0;
+                }
+            }
+        }
+        &.website-traffic {
+            > .container {
+                > #post {
+                    > ul {
+                        margin: 0 17px 0 17px;
+                        > li {
+                            list-style-position: outside;
+                        }
+                    }
                 }
             }
         }
@@ -158,6 +179,14 @@ mark { background: lightgrey;}
                 margin: 1em 0.8em;
                 .me {
                     font-size: 25pt;
+                }
+            }
+        }
+        &.post {
+            line-height: 2.4em;
+            > .container {
+                > .hero-image {
+                    width: 80vw;
                 }
             }
         }

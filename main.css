@@ -65,6 +65,10 @@ mark {
   margin: 30px auto 30px auto;
 }
 
+* body.post .container #post h2 {
+  font-size: 1.4em;
+}
+
 * body.post .container #post .jpg-image-set {
   width: 900px;
   display: -webkit-box;
@@ -109,6 +113,20 @@ mark {
 
 * body.post .container #post .svg-image-set .cat-svg {
   width: 300px;
+}
+
+* body.post .container #post-title {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+}
+
+* body.website-traffic > .container > #post > ul {
+  margin: 0 17px 0 17px;
+}
+
+* body.website-traffic > .container > #post > ul > li {
+  list-style-position: outside;
 }
 
 * body > .container {
@@ -177,6 +195,12 @@ mark {
   }
   body.home > .container .me {
     font-size: 25pt;
+  }
+  body.post {
+    line-height: 2.4em;
+  }
+  body.post > .container > .hero-image {
+    width: 80vw;
   }
   body.image-formats .container #post .jpg-image-set {
     width: 100%;
