@@ -23,6 +23,10 @@ mark {
   background: lightgrey;
 }
 
+ul {
+  margin: 0 17px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -119,10 +123,6 @@ mark {
   font-weight: bold;
   font-size: 2em;
   margin: 0;
-}
-
-* body.website-traffic > .container > #post > ul {
-  margin: 0 17px 0 17px;
 }
 
 * body.website-traffic > .container > #post > ul > li {

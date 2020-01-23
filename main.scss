@@ -8,6 +8,10 @@ a:hover   { color: #2C3E50; }
 
 mark { background: lightgrey;}
 
+ul {
+    margin: 0 17px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -95,7 +99,6 @@ mark { background: lightgrey;}
             > .container {
                 > #post {
                     > ul {
-                        margin: 0 17px 0 17px;
                         > li {
                             list-style-position: outside;
                         }
