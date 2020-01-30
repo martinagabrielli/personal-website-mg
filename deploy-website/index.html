@@ -24,7 +24,7 @@
 
     <img class="hero-image" src="/images/deploy.svg">
 
-    <p id="post">
+    <div id="post">
 
         <p>In this article we will see how to deploy a website with <b>AWS Lightsail</b>, and in the specific a WordPress website using macOS.</p>
         <p><b>AWS (Amazon Web Services) Lightsail</b> is a cloud computing service that you can use to host web applications and website. The technology provides the simplest way to manage Virtual Private Servers.
@@ -48,8 +48,8 @@
         <p>Once you sign up with Amazon Lightsail, you can create your lightsail instance. By clicking on <i>‘change AWS Region and Availability Zone’</i> you can select your favourite instance location.
         You will be prompted to select an Operating System platform. Linux works well for web servers unless you specifically want to use Microsoft technologies such as asp.net.</p>
         <p>On the <i>‘select a blueprint’</i>, you can choose an operating system only or an OS bundled with packages such as WordPress. An OS only blueprint is more flexible because it allows you to customize package installation. For the purpose of this article, we will select WordPress.</p>
-        <p>Generate an SSH key by clicking on <i>‘Change SSH key pair’</i> and again on <i>‘Create New’</i>. Save it in a safe folder. There’s also the option to add a launch script that does things like add software, update software, or configure your instance in some other way.</p>
-        <p>Towards the bottom of the screen, choose a plan for your instance, the $3.5 will work well plus you’ll get one month for free. At this point, name your instance and click <i>‘Create’</i>. Your instance will be created and it will take a few seconds to switch from pending to running status.</p>
+        <p>Generate an SSH key by clicking on <i>‘Change SSH key pair’</i> and again on <i>‘Create New’</i>. Save it somewhere on your computer. There’s also the option to add a launch script that does things like add software, update software, or configure your instance in some other way.</p>
+        <p>Towards the bottom of the screen, choose a plan for your instance, the $3.5 will work well, plus you’ll get one month for free. At this point, name your instance and click <i>‘Create’</i>. Your instance will be created and it will take a few seconds to switch from pending to running status.</p>
 
         <h3>2 - Create a static IP address</h3>
         
@@ -57,13 +57,13 @@
 
         <h3>3 - Import your website archives with a FTP</h3>
 
-        <p><b>Cyberduck</b> is a <i>FTP (File Transfer Protocol)</i> used for the transfer of computer files between a client and server on a computer network. You can download it for free both on macOS and Windows.</p>
+        <p><b>Cyberduck</b> is a <i>FTP (File Transfer Protocol)</i> used for the transfer of computer files between a client and server on a computer network. You can download it for free.</p>
         <ul>
-            <li>Open Cyberduck and click on <i>‘Open Connection’</i>. Select <i>‘SFTP (SSH file transfer protocol)’</i>.</li>
-            <li>On the server section insert the static IP address that you have previously created on AWS.</li>
-            <li>On the username you’ll need to insert <i>‘bitnami’</i>.</li>
-            <li>Password: leave it empty.</li>
-            <li>SSH private key: attach the one you created before.</li>
+            <li>Open Cyberduck and click on <i>‘Open Connection’</i>. Select <i>‘SFTP (SSH file transfer protocol)’</i>;</li>
+            <li>On the server section insert the static IP address that you have previously created on AWS;</li>
+            <li>On the username you’ll need to insert <i>‘bitnami’</i>;</li>
+            <li>Password: leave it empty;</li>
+            <li>SSH private key: attach the one you created before;</li>
             <li>Click connect.</li> 
         </ul>
         <p>A prompt message will show up saying <i>“Unknown fingerprint”</i>. This is because it’s the first time you connect to the server. A list of folders will show up. Go on <i>Apps -> WordPress -> htdocs</i>. What you’ll need to do now is to drag the content of <i>wp-content</i> of your WordPress website to the <i>wp-content</i> on Cyberduck.</p>
@@ -71,23 +71,27 @@
 
         <h3>4 - Create a database connection on Sequel Pro</h3>
 
-        <p>While Cyberduck is transferring the files, open <b>Sequel Pro</b> and create a new connection by clicking on the <b>+</b> symbol on the left bottom of the application window. From the menu list on top select <i>SSH</i> and let’s see how to fill the requested fields.</p>
-        <ul>
-            <li>Name: put the chosen name.</li>
-            <li>MySQL host: localhost.</li>
-            <li>The following details you’ll find them in the wp_config.php file that you can access from Cyberduck:</li>
-            <li>Username: bn_wordpress</li>
-            <li>Password: *find it in wp_config.php under MySQL database password*</li>
-            <li>Database: bitnami_wordpress.</li>
-            <li>Port: do not modify</li>
-            <li>SSH host: public IP address from Lightsail instance.</li>
-            <li>SSH user: bitnami.</li>
-            <li>SSH key: insert your SSH key.</li>
-            <li>SSH port: 22.</li>
+        <p>While Cyberduck is transferring the files, open <b>Sequel Pro</b> and create a new connection by clicking on the <b>+</b> symbol on the left bottom of the application window. From the menu list on top select <i>SSH</i> and let’s see how to fill the requested fields:</p>
+        <ul class="fields">
+            <li><b>Name</b>: put the chosen name;</li>
+            <li><b>MySQL host</b>: localhost;</li>
+            <li>You can find the following details in the <i>wp_config.php</i> file that you can access from Cyberduck:</li>
+            <li>
+              <ul>
+                <li><b>Username</b>: bn_wordpress;</li>
+                <li><b>Password</b>: *find it in <i>wp_config.php</i> under MySQL database password*;</li>
+                <li><b>Database</b>: bitnami_wordpress;</li>
+              </ul>
+            </li>
+            <li><b>Port</b>: do not modify;</li>
+            <li><b>SSH host</b>: public IP address from Lightsail instance;</li>
+            <li><b>SSH user</b>: bitnami;</li>
+            <li><b>SSH key</b>: insert your SSH key;</li>
+            <li><b>SSH port</b>: 22.</li>
         </ul>
         
-        <p>Now you’ll have to import the database that you have previously exported. Otherwise how is your website gonna show all the content you update on WordPress, duh?</p>
-        <p>Finally, the last step to take is to synch the security salt. Download the wp_config.php file from Cyberduck. Now open the wp_config.php file in the WordPress folder of your website. In this file find the ‘Authentication Unique Keys and Salts’ and copy all the define keys. These lines need to replace the same lines of the wp_config.php file that you have previously downloaded from Cyberduck. Save the file and upload it again on Cyberduck replacing the old wp_config.php.</p>
+        <p>Now you’ll have to import the database that you have previously exported. Otherwise how is your website gonna show all the content you've updated on WordPress, duh?</p>
+        <p>Finally, the last step to take is to synch the security salt. Download the <i>wp_config.php</i> file from Cyberduck. Now open the <i>wp_config.php</i> file in the WordPress folder of your website. In this file find the <i>‘Authentication Unique Keys and Salts’</i> and copy all the define keys. These lines need to replace the same lines of the <i>wp_config.php</i> file that you have previously downloaded from Cyberduck. Save the file and upload it again on Cyberduck replacing the old <i>wp_config.php</i></p>
         <p>Congratulations! You’ve deployed your WordPress website. </p>
         
     </div>

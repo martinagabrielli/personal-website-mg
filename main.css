@@ -129,6 +129,10 @@ ul {
   list-style-position: outside;
 }
 
+* body.deploy-website > .container > #post > ul.fields > li:nth-child(4) {
+  list-style-type: none;
+}
+
 * body > .container {
   margin: 3em 1.5em;
   font-size: 12pt;
