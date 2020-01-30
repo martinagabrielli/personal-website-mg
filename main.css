@@ -389,8 +389,11 @@ ul {
   body.home > .container .me {
     font-size: 25pt;
   }
+  body.post > .container > .hero-image {
+    width: 700px;
+  }
   body.image-formats .container #post .jpg-image-set {
-    width: 100%;
+    width: 900px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
