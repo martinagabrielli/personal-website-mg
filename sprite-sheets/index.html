@@ -22,7 +22,7 @@
     </div>
     <h1 id="post-title">Increase Web Performance with CSS Sprites</h1>
 
-    <img class="hero-image" src="/images/web.svg">
+    <img class="hero-image" src="/images/web.svg" alt="A desk with a monitor, a plant and a pencil cup on top">
 
     <div id="post">
 
@@ -44,26 +44,26 @@
 
         <div class="cat-icons">
           <div class="single">
-            <img class="cat" src="../images/cat-light.png">
+            <img class="cat" src="../images/cat-light.png" alt="A white cat face">
             <caption>Original state</caption>
           </div>
           <div class="single">
-            <img class="cat" src="../images/cat-dark.png">
+            <img class="cat" src="../images/cat-dark.png" alt="A black cat face">
             <caption>Hover state</caption>
           </div>
         </div>
 
         <p>Let's combine the two images side by side with photoshop:</p>
 
-        <img class="sprite-sheet" src="../images/sprite-sheet.jpg">
+        <img class="sprite-sheet" src="../images/sprite-sheet.jpg" alt="A white cat face on side of a black cat face">
 
         <p>With HTML we have created a div element with class <mark>item</mark> and with CSS we set the background URL to reference the image file we have created:</p>
 
-        <img class="code-img" src="../images/original.jpg">
+        <img class="code-img" src="../images/original.jpg" alt="Code snippet">
 
         <p>How this works is that the image on top is the image I want to display before hover. We use the background-position property with the 2-value syntax where the first value defines X and the second defines Y and we set both values to 0.</p>
 
-        <img class="code-img" src="../images/hover.jpg">
+        <img class="code-img" src="../images/hover.jpg" alt="Code snippet">
         
         <p>Then on hover I want the image below to be displayed, so that’s why the background-position Y is set to -20px. </p>
 
