@@ -147,10 +147,6 @@ ul {
   font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-* body > .container span {
-  color: #92979a;
-}
-
 * body > .container > #profile {
   display: inline-block;
 }
