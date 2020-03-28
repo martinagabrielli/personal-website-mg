@@ -157,6 +157,7 @@ ul {
         }
         > .container {
             margin: 3em 1.5em;
+            padding-bottom: 3em;
             font-size: 12pt;
 
             .section {
@@ -209,6 +210,12 @@ ul {
                     list-style-position: inside;
                 }
             }
+        }
+        .hompage-redirect {
+            cursor: pointer;
+            float: right;
+            padding: 2em 0;
+            text-transform: uppercase;
         }
     }
 }
