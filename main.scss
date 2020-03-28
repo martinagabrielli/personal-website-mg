@@ -1,3 +1,9 @@
+/*****************************************************************************/
+/*
+/* General
+/*
+/*****************************************************************************/
+
 html, body { height: 100%; }
 
 h1 { margin: 1em 0; }
@@ -120,6 +126,35 @@ ul {
                 }
             }
         }
+        &.sprite-sheets {
+            .container {
+                #post {
+                    .gist {
+                        color: #fff;
+                        .gist-file {
+                            .gist-data {
+                                .js-gist-file-update-container {
+                                    .file {
+                                        .type-text {
+                                            table {
+                                                background: #333;
+                                                tbody {
+                                                    tr {
+                                                        td {
+                                                            color: #fff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         > .container {
             margin: 3em 1.5em;
             font-size: 12pt;
@@ -133,6 +168,7 @@ ul {
             }
             > #profile {
                 display: inline-block;
+                margin-top: 10px;
                 > .hi {
                     color: #2C3E50;
                     > .social_icons {
@@ -246,16 +282,6 @@ ul {
         &.sprite-sheets {
             .container {
                 #post {
-                    .item {
-                        background: url(../images/cat-sprite.gif) no-repeat;
-                        background-size: 300px;
-                        background-position: 0 0;
-                        width: 150px;
-                        height: 150px;
-                        &:hover {
-                            background-position: -150px 0;
-                        }
-                    }
                     .cat-icons {
                         display: flex;
                         .single {
@@ -340,16 +366,6 @@ ul {
         &.sprite-sheets {
             .container {
                 #post {
-                    .item {
-                        background: url(../images/cat-sprite.gif);
-                        background-size: 300px;
-                        background-position: 0 0;
-                        width: 150px;
-                        height: 150px;
-                        &:hover {
-                            background-position: -150px 0;
-                        }
-                    }
                     .cat-icons {
                         display: flex;
                         .single {
@@ -396,9 +412,12 @@ ul {
     body {
         font-size: 10pt;
         line-height: 2em;
+        .container {
+            max-width: 880px;
+            margin: auto;
+        }
         &.home {
             > .container {
-                margin: 1em 0.8em;
                 .me {
                     font-size: 25pt;
                 }
