@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>How to Build a Clock with Vanilla JavaScript | Martina Gabrielli</title>
+  <meta name="author" content="Martina Gabrielli">
+  <meta name="description" content="How to build a clock with Vanilla JavaScript">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/main.css" />
+</head>
+
+<body class="post js-clock">
+  <div class="container">
+    <div id="profile">
+      <div class="hi">
+        <div class="me">
+          <span><a href="/" aria-label="homepage redirect"><b>MARTINA</b>GABRIELLI</a></span>
+        </div>
+      </div>
+    </div>
+
+    <h1 id="post-title">How to Build a Clock with Vanilla JavaScript</h1>
+    <img class="hero-image" src="/images/clock.svg"
+      alt="A woman sitting on a clock hand">
+    <div id="post">
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Basic knowledge of HTML and CSS.</li>
+            <li>Basic knowledge of Vanilla JavaScript and ES6 syntax.</li>
+        </ul>
+
+        <h2>Goals</h2>
+
+        <p>The premise of the program is to have an analogic clock with seconds, minutes and hour hands. These hands will point to the current time.</p>
+
+        <ul>
+          <li>
+            <a href="https://martinagabrielli.github.io/clock.js/" target="_blank" rel="noopener">View Demo</a>
+          </li>
+          <li>
+            <a href="https://github.com/martinagabrielli/clock.js" target="_blank" rel="noopener"s>View Source</a>
+          </li>
+        </ul>
+
+        <h2>Planning</h2>
+
+        <p>Before writing any code, we need to get an idea of the actual steps to take to go from nothing to finished product.</p>
+        <ul>
+            <li>Display a clock face with seconds, minute and hour hands.</li>
+            <li>Get the current date time.</li>
+            <li>Make the hands rotate on the clock face.</li>
+        </ul>
+
+        <p>In this project the use of JavaScript and CSS are equally important as they both need to work together for the clock to work well.</p>
+
+        <h2>Setup</h2>
+
+        <p>First, let's create the setup. We'll create index.html, which will just be a regular HTML skeleton putting in JS and CSS.</p>
+
+        <h2>Display clock face and hands & style them</h2>
+
+        <script src="https://gist.github.com/martinagabrielli/5b59ba1c1a8bd1665e906de368cd669e.js"></script>
+
+        <p>We'll add some style here, just for the app to make sense and look nice:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/a24adbc04dba4687ec5ddc443488f3ae.js"></script>
+
+        <p>We need to style the hands of the clock by adding some transform and transition properties to them:</p>
+        
+        <script src="https://gist.github.com/martinagabrielli/72cf9ad10140c3a1d004207fc44263ce.js"></script>
+        
+        <h2></h2>
+
+        <h2>Get the current date time</h2>
+
+        <p>Let's get started with the JavaScript now! We need to add a <code>setInterval()</code> method to set the movement of the hands by second. As parameter we will add a function <code>setDate()</code> (we're gonna create this in the next step), and the interval in milliseconds (in this case 1 second because that's the base unit of time):</p>
+
+        <script src="https://gist.github.com/martinagabrielli/5fe290d98fbb2e328d13a2d946f68d63.js"></script>
+
+        <p>Let's now create the <code>setDate()</code> function using ES6 syntax. Then we need to create a constant that sets the current date time for seconds, minutes and hour. To do this we can use the <code>new Date()</code> method:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/2f1cb0831509e09d9ace2554e85fdec6.js"></script>
+
+        <p>And then get the seconds, minutes and hour from <code>const now</code> with the following methods:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/b8a9403d5e91af1cab79e717a66c380e.js"></script>
+
+        <h2>Make the hands rotate on the clock face</h2>
+
+        <p>Let's start with the second hand. We need it to rotate following the degrees at which the seconds stand. We can use a simple math formula: <b>(current seconds / 60) * 360</b>. Let's translate this into JavaScript code:</p>
+        
+        <script src="https://gist.github.com/martinagabrielli/33e20ffd8d40878dd34012f10f67a926.js"></script>
+
+        <p>Now, we have a problem here. Since we previously transformed all clock hands by rotating them by 90 degrees, we need to add 90 to the math formula, otherwise the clock would not be exact on displaying the current seconds:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/4c8cd888435249cf00479ccced71bd2d.js"></script>
+
+        <p>Then we can query select the second, minutes and hour hands as we'll later need to apply the transform style to them:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/db266e43309e3f42d371e80137099222.js"></script>
+
+        <p>Now that we queried the HTML elements that represent the hands, we can use the <code>style.transform</code> property to rotate the elements to the desiered degrees:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/3fd91037831834f799b0148808ba823a.js"></script>
+
+        <p>Hurray! We got the second hand moving. Now let's do the same for the minutes and the hour hands:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/92c531569b95b3e79c5e6071ac9fd1c8.js"></script>
+
+        <p>Now, there's a small improvement here we can make about the clock hands. We want the minutes and hour hands to progressively move with the passing of the seconds/minutes, to make the clock look more real. We can improve the formulas in this way:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/5f3459d0e073f8a8eee25f0502c9fe1a.js"></script>
+
+        <p>Here we have the final script.js file:</p>
+
+        <script src="https://gist.github.com/martinagabrielli/6acea76681c227ce9a1949542985ecfa.js"></script>
+
+    </div>
+
+    <a class="hompage-redirect" href="/">Return to Homepage</a>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1 { margin: 1em 0; }
+h1, h2 { margin: 1.2em 0; }
 p  { margin: 1em 0; }
 
 a         { color: #9B59B6; text-decoration: none; }
@@ -134,28 +134,17 @@ ul {
         &.sprite-sheets {
             .container {
                 #post {
-                    .gist {
-                        color: #fff;
-                        .gist-file {
-                            .gist-data {
-                                .js-gist-file-update-container {
-                                    .file {
-                                        .type-text {
-                                            table {
-                                                background: #333;
-                                                tbody {
-                                                    tr {
-                                                        td {
-                                                            color: #fff;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                }
+            }
+        }
+        &.js-clock {
+            .container {
+                #profile {
+
+                }
+                #post {
+                    code {
+                        color: rgb(198, 113, 113);
                     }
                 }
             }
@@ -213,6 +202,29 @@ ul {
             #post {
                 > ul {
                     list-style-position: inside;
+                }
+                .gist {
+                    .gist-file {
+                        .gist-data {
+                            .js-gist-file-update-container {
+                                .file {
+                                    .Box-body {
+                                        table {
+                                            background: rgb(235, 235, 235);
+                                            tbody {
+                                                tr {
+                                                    td {
+                                                        span {
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -12,8 +12,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  margin: 1em 0;
+h1, h2 {
+  margin: 1.2em 0;
 }
 
 p {
@@ -144,16 +144,8 @@ ul {
   list-style-type: none;
 }
 
-* body.sprite-sheets .container #post .gist {
-  color: #fff;
-}
-
-* body.sprite-sheets .container #post .gist .gist-file .gist-data .js-gist-file-update-container .file .type-text table {
-  background: #333;
-}
-
-* body.sprite-sheets .container #post .gist .gist-file .gist-data .js-gist-file-update-container .file .type-text table tbody tr td {
-  color: #fff;
+* body.js-clock .container #post code {
+  color: #c67171;
 }
 
 * body > .container {
@@ -203,6 +195,10 @@ ul {
 
 * body > .container #post > ul {
   list-style-position: inside;
+}
+
+* body > .container #post .gist .gist-file .gist-data .js-gist-file-update-container .file .Box-body table {
+  background: #ebebeb;
 }
 
 * body .hompage-redirect {
