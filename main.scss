@@ -139,12 +139,35 @@ ul {
         }
         &.js-clock {
             .container {
-                #profile {
-
-                }
                 #post {
                     code {
                         color: rgb(198, 113, 113);
+                    }
+                }
+            }
+        }
+        &.seo-overview {
+            .container {
+                #post {
+                    .highlight {
+                        font-style: italic;
+                        color: #cd7a57;
+                    }
+                    .callout {
+                        background: #f2f2f2;
+                        display: flex;
+                        padding: 20px;
+                        span {
+                            font-size: 20px;
+                            padding-right: 10px;
+                        }
+                        p {
+                            margin: 0;
+                            color: #151515;
+                        }
+                    }
+                    ol {
+                        list-style-position: inside;
                     }
                 }
             }
